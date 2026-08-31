@@ -1,0 +1,67 @@
+name: Bug report
+description: Report a defect in the application (not a Harvest export format question)
+title: "[bug] "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Do not include genuine commercial Harvest data** in this report — no raw exports, client names, invoice contents, or time-entry notes from live accounts.
+
+        Use synthetic fixtures or a schema-only diagnostic where possible.
+
+  - type: input
+    id: version
+    attributes:
+      label: Harvest Escape Check version
+      placeholder: 0.1.0-alpha
+    validations:
+      required: true
+
+  - type: input
+    id: environment
+    attributes:
+      label: Browser and operating system (if UI-related)
+      placeholder: Chrome 140 / Windows 11
+    validations:
+      required: false
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Numbered steps using synthetic or redacted examples only
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behaviour
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behaviour
+    validations:
+      required: true
+
+  - type: textarea
+    id: diagnostic
+    attributes:
+      label: Schema diagnostic JSON (optional)
+      description: If relevant, paste a schema fingerprint diagnostic — inspect it before posting
+      render: json
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: no_raw_data
+    attributes:
+      label: Confirmation
+      options:
+        - label: I have not included raw Harvest export files or commercial business data in this report
+          required: true

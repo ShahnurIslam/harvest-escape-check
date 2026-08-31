@@ -1,0 +1,65 @@
+name: Harvest export compatibility
+description: Report an unrecognised or incorrectly parsed Harvest export
+title: "[compat] "
+labels:
+  - compatibility
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Do not attach or paste your raw Harvest export files.**
+
+        Share a **schema-only diagnostic** from the results screen instead. Inspect the diagnostic JSON yourself before posting if you have any concerns about its contents.
+
+        Harvest Escape Check is a public **alpha** — not all Harvest export formats are supported yet.
+
+  - type: input
+    id: version
+    attributes:
+      label: Harvest Escape Check version
+      description: e.g. 0.1.0-alpha, or a git commit hash if running from source
+      placeholder: 0.1.0-alpha
+    validations:
+      required: true
+
+  - type: input
+    id: export_type
+    attributes:
+      label: Detected export type (if any)
+      description: What the tool classified the file as, or "unknown"
+      placeholder: time_entries / invoices / unknown
+    validations:
+      required: true
+
+  - type: input
+    id: environment
+    attributes:
+      label: Browser and operating system
+      placeholder: Firefox 141 / macOS 15
+    validations:
+      required: true
+
+  - type: textarea
+    id: diagnostic
+    attributes:
+      label: Schema diagnostic JSON
+      description: Paste the schema fingerprint diagnostic from the results screen (not raw export data)
+      render: json
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: Brief description of the problem — e.g. wrong category detected, parser warning, missing columns
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: no_raw_data
+    attributes:
+      label: Confirmation
+      options:
+        - label: I have not attached or pasted raw Harvest export files, client names, invoice contents, or other commercial data
+          required: true
