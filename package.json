@@ -7,7 +7,7 @@
     "type": "git",
     "url": "git+https://github.com/ShahnurIslam/harvest-escape-check.git"
   },
-  "homepage": "https://github.com/ShahnurIslam/harvest-escape-check#readme",
+  "homepage": "https://harvest.shanislam.com/",
   "type": "module",
   "scripts": {
     "dev": "vite",

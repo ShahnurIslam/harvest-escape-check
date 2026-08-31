@@ -3,7 +3,7 @@ import { defineConfig } from 'vite'
 
 export default defineConfig({
   plugins: [react()],
-  // Project GitHub Pages site. Local `vite` / `vite preview` still work;
-  // preview is served under this path.
-  base: '/harvest-escape-check/',
+  // Custom domain (https://harvest.shanislam.com/) serves from root.
+  // Local `vite` / `vite preview` use the same base path.
+  base: '/',
 })
