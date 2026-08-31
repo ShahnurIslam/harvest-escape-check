@@ -48,7 +48,9 @@ Specifically:
 
 The only user-initiated action that leaves your browser is optional: copying or downloading the **schema fingerprint diagnostic** JSON to your clipboard or disk. That diagnostic is designed to exclude customer names, amounts, and row contents.
 
-> **Note:** Running `npm run dev` starts a local development server that serves application code to your browser; it does not receive your uploaded files. If you run a built copy from a website, verify what your hosting provider logs separately from this application’s local-processing behaviour.
+A hosted alpha is available at [https://shahnurislam.github.io/harvest-escape-check/](https://shahnurislam.github.io/harvest-escape-check/). GitHub Pages necessarily receives ordinary HTTP requests needed to serve the website, but Harvest archive contents are processed in the browser and are not sent to GitHub Pages by the application.
+
+> **Note:** Running `npm run dev` starts a local development server that serves application code to your browser; it does not receive your uploaded files. Hosting providers may log ordinary page requests separately from this application’s local-processing behaviour.
 
 ## Local development
 

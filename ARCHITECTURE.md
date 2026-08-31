@@ -133,3 +133,5 @@ Automated tests in `src/privacy/local-processing.test.ts` verify the application
 The only user-initiated outbound action is optional: copying or downloading the schema fingerprint diagnostic JSON (designed to exclude business data).
 
 Running `npm run dev` serves application code via a local Vite server; uploaded files are not sent to that server.
+
+A GitHub Pages host may receive ordinary HTTP requests used to serve the website. Archive contents are still processed in the browser and are not sent to GitHub Pages by the application.
