@@ -3,6 +3,11 @@
   "version": "0.1.0-alpha",
   "description": "Independent local browser tool to audit Harvest export archives before account cancellation.",
   "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShahnurIslam/harvest-escape-check.git"
+  },
+  "homepage": "https://github.com/ShahnurIslam/harvest-escape-check#readme",
   "type": "module",
   "scripts": {
     "dev": "vite",
